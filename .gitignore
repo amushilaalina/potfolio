@@ -1,0 +1,10 @@
+build/
+__pycache__/
+*.pyc
+.flet/
+.flutter-plugins
+.flutter-plugins-dependencies
+dist/
+venv/
+.env
+*.log

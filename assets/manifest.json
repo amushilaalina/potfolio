@@ -1,0 +1,19 @@
+{
+  "certificates": [
+    "certificates/matlab/Exprolereport.pdf",
+    "certificates/matlab/Matricesreport (1).pdf",
+    "certificates/matlab/Matricesreport.pdf",
+    "certificates/matlab/MOcertificate (1).pdf",
+    "certificates/matlab/MOreport.pdf",
+    "certificates/matlab/SF.pdf",
+    "certificates/matlab/SFreport.pdf",
+    "certificates/matlab/SOcertificate.pdf",
+    "certificates/matlab/SOreport.pdf"
+  ],
+  "pictures": [
+    "pictures/profile.jpeg"
+  ],
+  "videos": [
+    "videos/contribution-video.mp4"
+  ]
+}
