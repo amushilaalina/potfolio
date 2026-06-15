@@ -166,10 +166,10 @@ video{
             <source src="<!DOCTYPE html>
 <html>
 <head>
-    <title>Johannes Alexander Portfolio</title>
+    <title>Alin Amushila Portfolio</title>
 </head>
 <body>
-    <h1>Johannes Alexander</h1>
+    <h1>Aloina Amushila</h1>
     <p>Student at the University of Namibia (UNAM)</p>
 
     <h2>About Me</h2>
@@ -188,7 +188,7 @@ video{
     <p>My reflection video will be embedded here.</p>
 </body>
 </html>" type="video/mp4">
-            Your browser does not support the video tag.
+           alina semester video
         </video>
     </div>
 
