@@ -1,4 +1,4 @@
-name: Deploy Flet Portfolio
+name: Deploy Static Portfolio
 
 on:
   push:
@@ -16,48 +16,27 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  build:
-    name: Build Flet app
+  deploy:
+    name: Deploy to GitHub Pages
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
-
-      - name: Install dependencies
+      - name: Prepare site folder
         run: |
-          python -m pip install --upgrade pip
-          if [ -f requirements.txt ]; then
-            pip install -r requirements.txt
-          else
-            pip install flet
-          fi
-
-      - name: Check Python syntax
-        run: |
-          python -m py_compile main.py
-
-      - name: Build Flet web app
-        run: |
-          flet build web --yes --verbose --no-rich-output --skip-flutter-doctor --base-url potfolio --route-url-strategy hash
-
-      - name: Prepare static Pages folder
-        run: |
-          rm -rf static
-          mkdir -p static
-          cp -R build/web/. static/
+          # Copy assets into static/ so relative paths work from index.html
+          cp -R assets static/assets
           touch static/.nojekyll
+          echo "Site folder contents:"
+          find static -type f | sort | head -60
 
-      - name: Verify static output
-        run: |
-          test -f static/index.html
-          echo "Static folder ready:"
-          find static -maxdepth 3 -type f | head -80
+      - name: Verify index.html exists
+        run: test -f static/index.html && echo "OK" || (echo "Missing static/index.html" && exit 1)
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
@@ -67,14 +46,6 @@ jobs:
         with:
           path: static
 
-  deploy:
-    name: Deploy to GitHub Pages
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
       - name: Deploy GitHub Pages site
         id: deployment
         uses: actions/deploy-pages@v4
