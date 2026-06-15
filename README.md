@@ -173,14 +173,14 @@ video{
 <section id="contact">
     <h2>Contact Information</h2>
 
-    <p><strong>Name:</strong> Johannes Alexander</p>
+    <p><strong>Name:</strong> Alina Amushila</p>
     <p><strong>Institution:</strong> University of Namibia (UNAM)</p>
-    <p><strong>Email:</strong> your-email@example.com</p>
+    <p><strong>Email:</strong>alinapraiseamushila@gmail.com</p>
 
 </section>
 
 <footer>
-    <p>&copy; 2026 Johannes Alexander Portfolio</p>
+    <p>&copy; 2026 Alina Amushila Portfolio</p>
 </footer>
 
 </body>
