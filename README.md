@@ -163,7 +163,31 @@ video{
 
     <div class="video-container">
         <video controls>
-            <source src="reflection.mp4" type="video/mp4">
+            <source src="<!DOCTYPE html>
+<html>
+<head>
+    <title>Johannes Alexander Portfolio</title>
+</head>
+<body>
+    <h1>Johannes Alexander</h1>
+    <p>Student at the University of Namibia (UNAM)</p>
+
+    <h2>About Me</h2>
+    <p>
+        I am passionate about programming, engineering, and technology.
+        This portfolio showcases my projects, skills, and achievements.
+    </p>
+
+    <h2>Projects</h2>
+    <ul>
+        <li>Semester Project</li>
+        <li>Programming Assignments</li>
+    </ul>
+
+    <h2>Technical Blog</h2>
+    <p>My reflection video will be embedded here.</p>
+</body>
+</html>" type="video/mp4">
             Your browser does not support the video tag.
         </video>
     </div>
