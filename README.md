@@ -188,7 +188,7 @@ video{
     <p>My reflection video will be embedded here.</p>
 </body>
 </html>" type="video/mp4">
-           alina semester video
+        video.mp4.mp4
         </video>
     </div>
 
